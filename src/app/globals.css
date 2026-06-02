@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #1f3864;
+  --gold: #f4a21e;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  @apply bg-navy-50 text-navy-900 antialiased;
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+/* Scrollbar halus untuk konsistensi tampilan. */
+::selection {
+  background: var(--gold);
+  color: #fff;
+}
+
+@layer components {
+  /* Input form standar di area admin. */
+  .input {
+    @apply w-full rounded-lg border border-navy-100 px-3 py-2 text-sm text-navy outline-none focus:border-gold focus:ring-1 focus:ring-gold;
+  }
+}
