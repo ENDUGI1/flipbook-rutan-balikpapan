@@ -32,3 +32,5 @@ next-env.d.ts
 /logo-asn-berakhlak.png
 /rutan balikpapan.jpg
 /*.pdf
+
+.vercel
