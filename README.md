@@ -7,6 +7,16 @@ panduan dan melihat statistik akses.
 
 Proyek aktualisasi CPNS — dirancang sederhana, rapi, dan mudah dijelaskan.
 
+## Tautan
+
+- 🌐 **Website (live):** <https://flipbook-rutan-balikpapan.vercel.app>
+- 🔐 **Login petugas:** <https://flipbook-rutan-balikpapan.vercel.app/admin/login>
+- 💻 **Repository:** <https://github.com/ENDUGI1/flipbook-rutan-balikpapan>
+
+> Deploy **otomatis**: setiap `git push` ke branch `main` akan langsung
+> di-build & dipublikasikan oleh Vercel (tidak perlu menjalankan perintah deploy
+> manual).
+
 ## Teknologi
 
 - **Next.js** (App Router) + **TypeScript**
