@@ -5,6 +5,8 @@
 :root {
   --navy: #1f3864;
   --gold: #f4a21e;
+  /* Judul & teks isi memakai font yang sama (Titillium Web). */
+  --font-display: var(--font-body);
 }
 
 html {

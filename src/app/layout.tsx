@@ -1,19 +1,12 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Plus_Jakarta_Sans } from "next/font/google";
+import { Titillium_Web } from "next/font/google";
 import "./globals.css";
 
-// Display: serif berkarakter untuk judul (memberi kesan resmi & berwibawa).
-const fraunces = Fraunces({
+// Titillium Web dipakai untuk judul & teks isi (font sans bersih, berkesan resmi).
+// Variabel --font-display di-alias ke --font-body di globals.css.
+const titillium = Titillium_Web({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-display",
-  display: "swap",
-});
-
-// Body: Plus Jakarta Sans — tipografi buatan Indonesia, jernih di layar HP.
-const jakarta = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "600", "700"],
   variable: "--font-body",
   display: "swap",
 });
@@ -34,7 +27,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="id" className={`${fraunces.variable} ${jakarta.variable}`}>
+    <html lang="id" className={titillium.variable}>
       <body>{children}</body>
     </html>
   );
