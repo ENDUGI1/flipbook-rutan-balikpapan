@@ -91,6 +91,7 @@ export default function PanduanGrid({ panduan }: { panduan: Panduan[] }) {
         <FlipBookViewer
           fileUrl={selected.file_url}
           judul={selected.judul}
+          gdriveUrl={selected.download_url}
           onClose={() => setSelected(null)}
         />
       )}

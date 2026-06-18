@@ -13,6 +13,7 @@ type FormState = {
   jenis: string;
   deskripsi: string;
   urutan: number;
+  download_url: string;
   file: File | null;
 };
 
@@ -21,6 +22,7 @@ const emptyForm: FormState = {
   jenis: "Kunjungan",
   deskripsi: "",
   urutan: 0,
+  download_url: "",
   file: null,
 };
 
@@ -162,6 +164,7 @@ function PanduanForm({
           jenis: editing.jenis ?? "",
           deskripsi: editing.deskripsi ?? "",
           urutan: editing.urutan,
+          download_url: editing.download_url ?? "",
           file: null,
         }
       : emptyForm,
@@ -225,6 +228,7 @@ function PanduanForm({
         jenis: form.jenis || null,
         deskripsi: form.deskripsi || null,
         urutan: form.urutan,
+        download_url: form.download_url.trim() || null,
         file_url,
         cover_url,
       };
@@ -311,6 +315,23 @@ function PanduanForm({
               onChange={(e) => setForm({ ...form, deskripsi: e.target.value })}
               className="input resize-none"
             />
+          </Field>
+
+          <Field label="Link Unduh — Google Drive (opsional)">
+            <input
+              type="url"
+              value={form.download_url}
+              onChange={(e) =>
+                setForm({ ...form, download_url: e.target.value })
+              }
+              className="input"
+              placeholder="https://drive.google.com/file/d/.../view"
+            />
+            <p className="mt-1 text-xs text-navy-700/60">
+              Jika diisi, tombol “Unduh” memakai link ini (hemat kuota). Tempel
+              link share biasa (“Anyone with the link”) — otomatis diubah jadi
+              unduh langsung. Kosongkan untuk mengunduh dari file di atas.
+            </p>
           </Field>
 
           <Field

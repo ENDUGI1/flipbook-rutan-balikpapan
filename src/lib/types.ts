@@ -11,6 +11,7 @@ export type Panduan = {
   deskripsi: string | null;
   file_url: string | null;
   cover_url: string | null;
+  download_url: string | null;
   urutan: number;
   is_active: boolean;
   created_at: string;
